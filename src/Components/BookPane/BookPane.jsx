@@ -19,7 +19,7 @@ const BookPane =(props)=> {
      <div className="heart" onClick={()=>props.onOpinion(props.bookid,props.likes)}>   {
         likes===1?<img className="likeheart" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Circle-icons-heart.svg/2000px-Circle-icons-heart.svg.png"
         alt="like"/>:
-        <img className="unlikeheart" src="https://cdn3.iconfinder.com/data/icons/trico-circles-solid/24/Circle-Solid-Heart-512.png"
+        <img className="unlikeheart" src="https://cdn4.iconfinder.com/data/icons/basic-ui-elements/700/08_heart-512.png"
         alt="unlike"/>
         }
         </div>
