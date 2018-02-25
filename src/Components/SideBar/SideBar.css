@@ -2,17 +2,20 @@
 .App-Header{
     position: fixed;
     top: 0;
-    width: 23%;
+    width: auto;
+    margin-left:6%;
+    padding-right:3%;
     height:8vh;
     border-bottom-right-radius: 10px;
     border-right: 3px solid ;
     background: rgb(106, 10, 10);
     color: #f1f1f1;
     text-decoration: underline;
-  
+  display:flex;
+ justify-content: flex-end;
     left:0;
     text-align: center;
-    width: 32%;
+    
 }
 .HeaderText{
     padding:2px;

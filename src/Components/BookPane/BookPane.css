@@ -89,6 +89,7 @@
     font-weight: 600;
     font-size: 13px;
     letter-spacing: -0.5px;
+    margin-top: -0.2em;
 }
 .BP-author{
     font-family: 'helvetica';
@@ -98,7 +99,6 @@
     margin-top: 30px;
     margin-right: 20px;
     text-align: right;
-    position: absolute;
     
 }
 .BP-rating{
@@ -133,5 +133,7 @@
  
 }
 .heart{
-  position: static;
+  position: relative;
+  margin-left: 11.5em;
+  margin-top: -1.5em;
 }
