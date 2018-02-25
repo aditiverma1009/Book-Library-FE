@@ -16,11 +16,11 @@ const BookPane =(props)=> {
     <div className="bookDetails">
         
         {/* <p className="BP-bookid">{props.bookid}</p> */}
-     <div className="heart" onClick={()=>props.onOpinion(props.bookid)}>   {
+     <div className="heart" onClick={()=>props.onOpinion(props.bookid,props.likes)}>   {
         likes===1?<img className="likeheart" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Circle-icons-heart.svg/2000px-Circle-icons-heart.svg.png"
         alt="like"/>:
         <img className="unlikeheart" src="https://cdn3.iconfinder.com/data/icons/trico-circles-solid/24/Circle-Solid-Heart-512.png"
-        alt="like"/>
+        alt="unlike"/>
         }
         </div>
         <p className="BP-name">{props.name}</p>

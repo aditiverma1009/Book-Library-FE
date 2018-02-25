@@ -17,7 +17,7 @@ const bookData=props.bookData;
              rating={step.rating}
              likes={step.likes}
              key={step.bookid}
-             onOpinion={(i)=>props.onOpinion(i)}
+             onOpinion={(i,l)=>props.onOpinion(i,l)}
              />
         ))
     }

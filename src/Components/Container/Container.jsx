@@ -10,7 +10,6 @@ class Container extends Component {
     super();
     this.state = {
       response: {},
-      opinion:0,
     };
     this.fetchBooks();
   }
@@ -21,19 +20,25 @@ loadBooksIntoDb = () => {
     url: '/storingBooks',
   });
   console.log("in save in db");
+  this.setState({
+    response:{},
+  });
   this.fetchBooks();
 };
 
-onOpinion=(key)=>{
+onOpinion=(key,likestatus)=>{
+  if(likestatus===0){
   axios({
     method: 'post',
     url: ('/like/'+key),
   });
-  this.setState({
-    opinion:1,
-  })
-  console.log("liked"+key);
-  this.fetchBooks();
+}else if(likestatus===1){
+  axios({
+    method: 'post',
+    url: ('/unlike/'+key),
+  });
+}
+this.fetchBooks();
 }
 
 fetchBooks=()=>{
@@ -52,8 +57,7 @@ render(){
   Object.keys(this.state.response).length===0?
     <LoadBox loadBooksIntoDb={()=>this.loadBooksIntoDb()}/>:
     Object.keys(this.state.response).map((step)=>{
-      
-      return <BookShelf bookData={this.state.response[step]} author={step} key={step} onOpinion={(i)=>this.onOpinion(i)}/>
+      return <BookShelf bookData={this.state.response[step]} author={step} key={step}  onOpinion={(i,l)=>this.onOpinion(i,l)}/>
     })
     );
 }
