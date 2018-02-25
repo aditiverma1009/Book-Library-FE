@@ -7,7 +7,7 @@ import './BookPane.css';
 const BookPane =(props)=> { 
     const likes=props.likes;
   return(
-    <div className="BookPane-box">
+    <div className="BookPane-box col-2  col-mq-3 col-m-4">
     <div className="imgParent">
     <img className="bookCover" 
         src="https://slack-imgs.com/?c=1&url=https%3A%2F%2Fimages-na.ssl-images-amazon.com%2Fimages%2FI%2F51VNlzbfpXL._SX331_BO1%2C204%2C203%2C200_.jpg" 
