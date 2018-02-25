@@ -1,0 +1,19 @@
+.Book-Shelf-orange{
+    background-color: orange;
+    padding-left: 2%;
+    width: 98%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.authorName{
+    color: black;
+    font-family: "helvetica";
+    font-weight: 100;
+    margin-left: 5%;
+}
+.Book-Shelf-Outer{
+    margin-top: 8em;
+    width: 94%;
+    float: right;
+   
+}

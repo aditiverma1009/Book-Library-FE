@@ -1,0 +1,98 @@
+// import PropTypes from 'prop-types';
+import axios from 'axios';
+import React, { Component } from 'react';
+import './App.css';
+// import BookCard from '../BookCard/BookCard';
+
+const onSync = () => {
+  axios({
+    method: 'post',
+    url: '/storingBooks',
+  });
+};
+
+const resp=()=> axios.get('/byAuthor');
+
+class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      response: {},
+      keys:[],
+      keyvalues:[],
+    };
+  }
+
+componentWillMount(){ 
+resp().then((data)=>{
+  console.log("data"+data);
+  this.setState({
+    response:data,
+  });
+  });
+
+  console.log("<<"+this.state.response);
+}
+
+  render() {
+    if(this.state.response==={}){
+    return (
+      <div className="App-Body">
+        <div className="App-Header">
+          <p className="HeaderText">The <span className="bookCap">Book</span> Shelf</p>
+        </div>
+        <div className="App-Sidebar" />
+        <div className="LoadBox">
+          <p className="textLoadBox">Oops! No books found!</p>
+          <p className="textLoadBox">Import them now ?</p>
+          <button className="btnLoadBox" onClick={() => onSync()}>SYNC</button>
+        </div>
+      </div>
+    );
+  }
+  else if(this.state.response!=={}){
+    return(<div>hi</div>);}
+  //   let resp=this.state.response.data;
+  //   console.log(this.state.response);
+
+  //   return(
+  //   <div className="App-Body">
+  //   <div className="App-Header" />
+  //   <div className="App-Sidebar" />
+  //   <div>
+  //     <div headingBar="J K Rowling">{
+       
+  //       resp.map((step,index)=>{
+  //         return(
+  //         <BookCard 
+  //         bookid={step.bookid}
+  //         name={step.name}
+  //         author={step.author}
+  //         rating={step.rating}
+  //         likes={step.likes}/>
+  //         );
+  //       })
+  //     } 
+  //     </div>
+  //  </div> 
+  //  <div>
+  //      <div headingBar="J K Rowling"/>{
+  //       this.state.response.data['J K Rowling'].map((step,index)=>{
+  //         return(
+  //         <BookCard 
+  //         bookid={step.bookid}
+  //         name={step.name}
+  //         author={step.author}
+  //         rating={step.rating}
+  //         likes={step.likes}/>
+  //         );
+  //       })
+  //     }
+  //   </div>
+  //   </div>
+  //   );
+  }
+  }
+}
+export default App;
+

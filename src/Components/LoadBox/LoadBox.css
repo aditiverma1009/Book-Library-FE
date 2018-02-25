@@ -1,0 +1,19 @@
+
+.LoadBox{
+    height:40vh;
+   
+        position: fixed; /* or absolute */
+        top: 35%;
+        left: 35%;
+
+    background-color: orange;
+    color:black;
+    border:2px solid black;
+ width:40em;
+    text-align: center;
+}
+.textLoadBox{
+    font-family: Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}

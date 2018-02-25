@@ -1,0 +1,38 @@
+
+.App-Header{
+    position: fixed;
+    top: 0;
+    width: 23%;
+    height:8vh;
+    border-bottom-right-radius: 10px;
+    border-right: 3px solid ;
+    background: rgb(106, 10, 10);
+    color: #f1f1f1;
+    text-decoration: underline;
+  
+    left:0;
+    text-align: center;
+    width: 32%;
+}
+.HeaderText{
+    padding:2px;
+    padding: 2px;
+    margin-left: 30px;
+    font-family: Helvetica;
+    letter-spacing: 1px;
+    font-size: 26px;
+}
+.App-Sidebar{
+    position: fixed;
+    left: 0;
+    width: 6%;
+    z-index: 1;
+    height:100vh;
+   top:0;
+    background: rgb(46, 46, 46);
+    color: #f1f1f1;
+}
+
+.bookCap{
+    font-size: 35px;
+}
