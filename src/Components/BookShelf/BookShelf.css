@@ -4,6 +4,10 @@
     width: 98%;
     padding-top: 10px;
     padding-bottom: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 4%;
+    padding-right: 4%;
 }
 .authorName{
     color: black;

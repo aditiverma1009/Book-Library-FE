@@ -20,9 +20,6 @@ loadBooksIntoDb = () => {
     url: '/storingBooks',
   });
   console.log("in save in db");
-  this.setState({
-    response:{},
-  });
   this.fetchBooks();
 };
 
@@ -52,7 +49,7 @@ fetchBooks=()=>{
 
 render(){
 
-  console.log("in return");
+  console.log("in return", this.state.response);
  return(
   Object.keys(this.state.response).length===0?
     <LoadBox loadBooksIntoDb={()=>this.loadBooksIntoDb()}/>:
